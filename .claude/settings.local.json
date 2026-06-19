@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Dilan\\\\Claude\\\\Projects\\\\DILNIC STUDIO\\\\vertice-fc\" -Force | Where-Object { $_.Name -ne \"node_modules\" } | Select-Object Name, PSIsContainer)",
+      "PowerShell(gh *)",
+      "PowerShell(vercel *)"
+    ]
+  }
+}
