@@ -10,10 +10,11 @@ export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
 
-  // Parallax / scale on the BACKGROUND only.
-  const yImg = useTransform(scrollYProgress, [0, 1], [0, 180]);
-  const scaleImg = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.9], [1, 0.35]);
+  // Parallax / scale on the BACKGROUND only. Translation is kept small and the
+  // image layer is oversized (see JSX) so the drift never exposes an edge.
+  const yImg = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const scaleImg = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.9], [1, 0.4]);
 
   // Gentle parallax on content — NO opacity fade on the CTA (stays visible).
   const yContent = useTransform(scrollYProgress, [0, 1], [0, -60]);
@@ -38,8 +39,12 @@ export default function Hero() {
 
   return (
     <section ref={ref} onMouseMove={onMove} className="relative min-h-[100svh] overflow-hidden bg-night">
-      {/* Background image layer */}
-      <motion.div style={{ y: yImg, scale: scaleImg, opacity: bgOpacity }} className="absolute inset-0">
+      {/* Background image layer — oversized (h-140%, top -20%) so parallax drift
+          never reveals a gap at the top or bottom edge. */}
+      <motion.div
+        style={{ y: yImg, scale: scaleImg, opacity: bgOpacity }}
+        className="absolute inset-x-0 -top-[20%] h-[140%] will-change-transform"
+      >
         <Image src={U(IMAGES.heroMain, 2000)} alt="Jugador entrenando en VÉRTICE FC" fill priority sizes="100vw" className="object-cover object-center opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-night/75 via-night/45 to-night" />
         <div className="absolute inset-0 bg-gradient-to-r from-night via-night/30 to-transparent" />
