@@ -21,7 +21,7 @@ export default function Galeria() {
             const span = i === 0 ? "col-span-2 row-span-2" : i === 3 ? "md:col-span-2" : "";
             return (
               <Reveal key={i} delay={(i % 4) * 0.06} scale className={`${span} h-full`}>
-                <ImageReveal src={U(img, 1100)} alt={`Galería VÉRTICE FC ${i + 1}`} sizes="(max-width:768px) 50vw, 25vw" className="h-full w-full rounded-2xl" />
+                <ImageReveal src={img} alt={`Galería VÉRTICE FC ${i + 1}`} sizes="(max-width:768px) 50vw, 25vw" className="h-full w-full rounded-2xl" />
               </Reveal>
             );
           })}

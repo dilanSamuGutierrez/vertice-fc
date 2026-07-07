@@ -39,7 +39,7 @@ export default function Problema() {
 
         <RevealDefault scale className="relative">
           <Parallax amount={50} className="aspect-[4/5] w-full overflow-hidden rounded-3xl">
-            <ImageReveal src={U(IMAGES.youthGame, 1200)} alt="Niños jugando fútbol sin método" sizes="(max-width:768px) 100vw, 50vw" className="h-full w-full" />
+            <ImageReveal src={IMAGES.youthGame} alt="Niños jugando fútbol sin método" sizes="(max-width:768px) 100vw, 50vw" className="h-full w-full" />
           </Parallax>
           <div className="absolute -bottom-6 -left-6 max-w-[220px] rounded-2xl border border-line bg-night/90 p-5 backdrop-blur">
             <p className="font-display text-4xl text-red-400">73%</p>

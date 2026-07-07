@@ -10,6 +10,7 @@ type Props = {
   className?: string;
   variant?: "lime" | "outline" | "grass";
   strength?: number;
+  fullWidthMobile?: boolean;
 };
 
 export default function MagneticButton({
@@ -19,6 +20,7 @@ export default function MagneticButton({
   className = "",
   variant = "lime",
   strength = 0.45,
+  fullWidthMobile = false,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -46,6 +48,9 @@ export default function MagneticButton({
       ? "bg-grass text-chalk hover:bg-grass-bright"
       : "border border-chalk/25 text-chalk hover:border-lime hover:text-lime";
 
+  const widthCls = fullWidthMobile ? "flex w-full sm:inline-flex sm:w-auto" : "inline-flex";
+  const wrapperCls = fullWidthMobile ? "block w-full sm:inline-block sm:w-auto" : "inline-block";
+
   const content = (
     <motion.div
       ref={ref}
@@ -53,7 +58,7 @@ export default function MagneticButton({
       style={{ x: springX, y: springY }}
       onMouseMove={handleMove}
       onMouseLeave={reset}
-      className={`${base} ${styles} ${className}`}
+      className={`${base.replace("inline-flex", widthCls)} ${styles} ${className}`}
     >
       <motion.span style={{ x: textX, y: textY }} className="pointer-events-none inline-flex items-center gap-2">
         {children}
@@ -61,6 +66,6 @@ export default function MagneticButton({
     </motion.div>
   );
 
-  if (href) return <a href={href} onClick={onClick} className="inline-block">{content}</a>;
-  return <button onClick={onClick} type="button" className="inline-block">{content}</button>;
+  if (href) return <a href={href} onClick={onClick} className={wrapperCls}>{content}</a>;
+  return <button onClick={onClick} type="button" className={wrapperCls}>{content}</button>;
 }

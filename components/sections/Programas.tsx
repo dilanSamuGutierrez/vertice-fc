@@ -29,7 +29,7 @@ export default function Programas() {
             <StaggerItem key={p.name}>
               <article className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border bg-coal/60 transition-all duration-500 ${i === 2 ? "border-lime/40 shadow-[0_0_60px_-20px_rgba(190,242,100,0.5)]" : "border-line hover:border-lime/30"}`}>
                 <div className="relative h-56 overflow-hidden">
-                  <Image src={U(p.img, 900)} alt={p.name} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-[1200ms] ease-out-expo group-hover:scale-110" />
+                  <Image src={p.img} alt={p.name} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-[1200ms] ease-out-expo group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-coal to-transparent" />
                   <span className="absolute left-5 top-5 rounded-full bg-night/70 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-lime backdrop-blur">{p.tag}</span>
                   {i === 2 && <span className="absolute right-5 top-5 rounded-full bg-lime px-3 py-1 text-xs font-bold uppercase tracking-widest text-night">Más elegido</span>}

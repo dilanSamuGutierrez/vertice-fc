@@ -52,7 +52,7 @@ export default function Solucion() {
 
           <Reveal scale className="relative">
             <Parallax amount={60} className="aspect-[3/4] w-full overflow-hidden rounded-3xl">
-              <ImageReveal src={U(IMAGES.training, 1200)} alt="Entrenamiento de alto rendimiento" sizes="(max-width:1024px) 100vw, 40vw" className="h-full w-full" />
+              <ImageReveal src={IMAGES.training} alt="Entrenamiento de alto rendimiento" sizes="(max-width:1024px) 100vw, 40vw" className="h-full w-full" />
             </Parallax>
             <div className="absolute -right-4 -top-4 rounded-full bg-lime px-5 py-3 font-display text-xl uppercase text-night shadow-[0_0_40px_-8px_rgba(190,242,100,0.7)]">
               Método Vértice™

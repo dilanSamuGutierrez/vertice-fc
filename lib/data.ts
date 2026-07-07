@@ -8,17 +8,17 @@ export const IMAGES = {
   heroMain: "photo-1574629810360-7efbbe195018", // player with ball
   heroSecondary: "photo-1551958219-acbc608c6377", // ball on pitch
   stadium: "photo-1459865264687-595d652de67e", // match action
-  pitchAerial: "photo-1606925797300-0b35e9d1794e", // aerial field
-  kids: "photo-1577223625816-7546f13df25d", // youth training
-  training: "photo-1543326727-cf6c39e8f84c", // running drill
-  goal: "photo-1526232761682-d26e03ac148e", // goal net
+  pitchAerial: "/cancha.png", // aerial field
+  kids: "/kids.png", // youth training
+  training: "/alt_rendi.png", // running drill
+  goal: "/goal.png", // goal net
   team: "photo-1560272564-c83b66b1ad12", // huddle
-  cleats: "photo-1517466787929-bc90951d0974", // boots + ball
+  cleats: "/cc.png", // boots + ball
   gym: "photo-1571019613454-1cb2f99b2d8b", // strength
-  youthGame: "photo-1508098682722-e99c43a406b2", // youth match
+  youthGame: "/problem.png", // youth match
   ballNet: "photo-1431324155629-1a6deb1dec8d", // stadium lights
   coach: "photo-1552674605-db6ffd4facb5", // coach
-  celebrate: "photo-1517927033932-b3d18e61fb3a", // celebration
+  celebrate: "/celebrate.png", // celebration
 };
 
 export const STATS = [
