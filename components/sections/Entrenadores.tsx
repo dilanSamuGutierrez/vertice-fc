@@ -20,7 +20,7 @@ export default function Entrenadores() {
           {COACHES.map((c) => (
             <StaggerItem key={c.name}>
               <article className="group relative aspect-[3/4] overflow-hidden rounded-3xl border border-line">
-                <Image src={U(c.img, 900)} alt={c.name} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                <Image src={c.img} alt={c.name} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <span className="inline-flex rounded-full bg-lime/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-lime">{c.badge}</span>

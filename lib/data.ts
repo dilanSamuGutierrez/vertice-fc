@@ -12,13 +12,16 @@ export const IMAGES = {
   kids: "/kids.png", // youth training
   training: "/alt_rendi.png", // running drill
   goal: "/goal.png", // goal net
-  team: "photo-1560272564-c83b66b1ad12", // huddle
+  team: "/team.png", // huddle
   cleats: "/cc.png", // boots + ball
-  gym: "photo-1571019613454-1cb2f99b2d8b", // strength
+  gym: "/gym.png", // strength
   youthGame: "/problem.png", // youth match
   ballNet: "photo-1431324155629-1a6deb1dec8d", // stadium lights
-  coach: "photo-1552674605-db6ffd4facb5", // coach
+  coach: "/coach.png", // coach
   celebrate: "/celebrate.png", // celebration
+  coach_1: "/coach_1.png", // Andrés Mejía
+  coach_2: "/coach_2.png", // Carolina Ruiz
+  coach_3: "/coach_3.png", // Julián Torres
 };
 
 export const STATS = [
@@ -53,9 +56,9 @@ export const PROGRAMS = [
 ];
 
 export const COACHES = [
-  { name: "Andrés Mejía", role: "Director Deportivo", img: IMAGES.coach, badge: "Licencia PRO CONMEBOL" },
-  { name: "Carolina Ruiz", role: "Preparadora Física", img: IMAGES.gym, badge: "MSc. Ciencias del Deporte" },
-  { name: "Julián Torres", role: "Entrenador Formativo", img: IMAGES.team, badge: "Ex-jugador profesional" },
+  { name: "Andrés Mejía", role: "Director Deportivo", img: IMAGES.coach_1, badge: "Licencia PRO CONMEBOL" },
+  { name: "Carolina Ruiz", role: "Preparadora Física", img: IMAGES.coach_2, badge: "MSc. Ciencias del Deporte" },
+  { name: "Julián Torres", role: "Entrenador Formativo", img: IMAGES.coach_3, badge: "Ex-jugador profesional" },
 ];
 
 export const EVENTS = [

@@ -57,7 +57,7 @@ export default function Instalaciones() {
               key={f.title}
               className="group relative h-[60vh] w-[82vw] shrink-0 snap-center overflow-hidden rounded-3xl border border-line sm:w-[60vw] lg:h-[58vh] lg:w-[38vw]"
             >
-              <Image src={U(f.img, 1400)} alt={f.title} fill sizes="(max-width:1024px) 82vw, 38vw" className="object-cover transition-transform duration-[1200ms] ease-out-expo group-hover:scale-110" />
+              <Image src={f.img} alt={f.title} fill sizes="(max-width:1024px) 82vw, 38vw" className="object-cover transition-transform duration-[1200ms] ease-out-expo group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-night via-night/20 to-transparent" />
               <span className="absolute left-5 top-5 rounded-full bg-night/70 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-lime backdrop-blur">0{i + 1}</span>
               <div className="absolute bottom-0 left-0 p-6 md:p-8">
